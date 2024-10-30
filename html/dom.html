@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="dom.js" defer></script>
+  </head>
+  <body>
+    <div id="x">xxx</div>
+    <div class="y">yyy</div>
+    <form action="javascript:f('kk')">
+      <input
+        type="text"
+        id="name"
+        placeholder="name"
+        onchange="javascript:nm(this)"
+      />
+      <input
+        type="email"
+        id="email"
+        placeholder="email"
+        onchange="javascript:em()"
+      />
+      <input type="tel" id="mobile" placeholder="010-0000..." />
+      <button type="submit" value="ddd">submit</button>
+      <button type="submit" name="SSS" value="SSS"></button>
+    </form>
+  </body>
+</html>

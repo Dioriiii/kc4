@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <button id="chooseKorean" class="chooseBtn">국어 수업 요일 선택 ></button>
+      <span>요일을 선택하세요!</span>
+    </p>
+    <p>
+      <button id="chooseMath" class="chooseBtn">수학 수업 요일 선택 ></button>
+      <span>요일을 선택하세요!</span>
+    </p>
+    <p>
+      <input id="inputBox" type="text" />
+    </p>
+  </body>
+  <script src="ttt.js" type="module">
+
+    import  { getNextWeek, debounce, throttle }  from ttt.js;
+
+    const btnKor = document.getElementById("chooseKorean");
+    const btnMath = document.getElementById("chooseMath");
+    const inputBox = document.querySelector("#inputBox");
+
+    const btnKorTxt = getNextWeek();
+    const btnMathTxt = getNextWeek();
+
+    btnKor.onclick = debounce(
+      () => (btnKor.nextElementSibling.innerText = btnKorTxt()),
+      500
+    );
+
+    btnMath.onclick = throttle(
+      () => (btnMath.nextElementSibling.innerText = btnMathTxt()),
+      500
+    );
+
+    inputBox.oninput = debounce(
+      () => console.log("search>>", inputBox.value),
+      500
+    );
+  </script>
+</html>
