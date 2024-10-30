@@ -55,14 +55,6 @@ Array.prototype.sortBy = function (key) {
     return 0;
   });
 };
-Array.prototype.firstObject = {
-  get() {
-    return this[0];
-  },
-  set(val) {
-    this[0] = val;
-  },
-};
 
 Object.defineProperties(Array.prototype, {
   firstObject: {
