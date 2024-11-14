@@ -1,3 +1,4 @@
+export {};
 // Array.prototype을 확장한 함수들을 TypeScript로 작성하시오.
 // mapBy, filterBy, findBy, rejectBy, sortBy, groupBy, firstObject, lastObject
 interface Array<T> {

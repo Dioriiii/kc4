@@ -1,0 +1,22 @@
+@host=http://localhost:7000
+Content-Type: application/json
+
+### get - ttt
+# http://localhost:7000/ttt/333?name=홍길동
+GET {{host}}/ttt/444?name=홍장미
+
+
+### get - users
+GET {{host}}/users
+
+### users - post
+POST {{host}}/users
+Content-Type : application/json
+
+{
+  "email": "chs@naver.com",
+  "name": "dioriii"
+}
+
+### delete - users
+DELETE {{host}}/users/2

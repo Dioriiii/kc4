@@ -1,3 +1,4 @@
+export {};
 // type Size = {
 //   id: "XS" | "S" | "M" | "L" | "XL";
 //   price: number;
